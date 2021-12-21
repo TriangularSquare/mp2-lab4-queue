@@ -19,6 +19,12 @@ public:
 	bool IsEmpty();
 	bool IsFull();
 
+	int GetSize();
+	int GetMaxSize();
+
+	int GetHead();
+	int GetTail();
+
 	void Push(T elem);
 	T Pop();
 
@@ -128,6 +134,31 @@ template<class T>
 inline bool TQueue<T>::IsFull()
 {
 	return Counter == MaxSize;
+}
+
+
+template<class T>
+inline int TQueue<T>::GetSize()
+{
+	return Counter;
+}
+
+template<class T>
+inline int TQueue<T>::GetMaxSize()
+{
+	return MaxSize;
+}
+
+template<class T>
+inline int TQueue<T>::GetHead()
+{
+	return Head;
+}
+
+template<class T>
+inline int TQueue<T>::GetTail()
+{
+	return Tail;
 }
 
 template<class T>
